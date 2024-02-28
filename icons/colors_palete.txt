@@ -1,0 +1,33 @@
+- Tailwind
+
+{ 'russian_violet': { DEFAULT: '#46255e', 100: '#0e0713', 200: '#1c0f26', 300: '#2b1639', 400: '#391e4c', 500: '#46255e', 600: '#703a96', 700: '#965cc0', 800: '#b992d5', 900: '#dcc9ea' }, 'thistle': { DEFAULT: '#eacef7', 100: '#390d4e', 200: '#73199c', 300: '#a833de', 400: '#c981ea', 500: '#eacef7', 600: '#eed8f9', 700: '#f3e2fa', 800: '#f7ecfc', 900: '#fbf5fd' }, 'electric_purple': { DEFAULT: '#ae46db', 100: '#250a31', 200: '#4a1361', 300: '#6f1d92', 400: '#9326c2', 500: '#ae46db', 600: '#bf6de2', 700: '#cf91e9', 800: '#dfb6f1', 900: '#efdaf8' }, 'black': { DEFAULT: '#000000', 100: '#000000', 200: '#000000', 300: '#000000', 400: '#000000', 500: '#000000', 600: '#333333', 700: '#666666', 800: '#999999', 900: '#cccccc' }, 'sky_blue': { DEFAULT: '#49cade', 100: '#092d32', 200: '#125964', 300: '#1c8696', 400: '#25b2c8', 500: '#49cade', 600: '#6ed5e4', 700: '#92dfeb', 800: '#b7eaf2', 900: '#dbf4f8' } }
+
+- CSV
+
+46255e,eacef7,ae46db,000000,49cade
+
+- With #
+
+#46255e, #eacef7, #ae46db, #000000, #49cade
+
+- Array
+
+["46255e","eacef7","ae46db","000000","49cade"]
+
+- Object
+
+{"Russian violet":"46255e","Thistle":"eacef7","Electric purple":"ae46db","Black":"000000","Sky blue":"49cade"}
+
+- Extended Array
+
+[{"name":"Russian violet","hex":"46255e","rgb":[70,37,94],"cmyk":[26,61,0,63],"hsb":[275,61,37],"hsl":[275,44,26],"lab":[22,27,-28]},{"name":"Thistle","hex":"eacef7","rgb":[234,206,247],"cmyk":[5,17,0,3],"hsb":[281,17,97],"hsl":[281,72,89],"lab":[86,17,-17]},{"name":"Electric purple","hex":"ae46db","rgb":[174,70,219],"cmyk":[21,68,0,14],"hsb":[282,68,86],"hsl":[282,67,57],"lab":[50,65,-58]},{"name":"Black","hex":"000000","rgb":[0,0,0],"cmyk":[0,0,0,100],"hsb":[0,0,0],"hsl":[0,0,0],"lab":[0,0,0]},{"name":"Sky blue","hex":"49cade","rgb":[73,202,222],"cmyk":[67,9,0,13],"hsb":[188,67,87],"hsl":[188,69,58],"lab":[75,-29,-20]}]
+
+- XML
+
+<palette>
+  <color name="Russian violet" hex="46255e" r="70" g="37" b="94" />
+  <color name="Thistle" hex="eacef7" r="234" g="206" b="247" />
+  <color name="Electric purple" hex="ae46db" r="174" g="70" b="219" />
+  <color name="Black" hex="000000" r="0" g="0" b="0" />
+  <color name="Sky blue" hex="49cade" r="73" g="202" b="222" />
+</palette>
