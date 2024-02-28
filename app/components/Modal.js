@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { setDoc, uploadFile } from "@junobuild/core-peer";
-import { AuthContext } from "./Auth";
+import { AuthContext } from "../utils/AuthWrapper";
 import { nanoid } from "nanoid";
 
 export const Modal = () => {

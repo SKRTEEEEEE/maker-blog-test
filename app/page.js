@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { initJuno } from "@junobuild/core-peer";
-import { Auth } from "@/app/components/Auth";
+import { AuthWrapper } from "@/app/utils/AuthWrapper";
 import { Table } from "@/app/components/Table";
 import { Modal } from "@/app/components/Modal";
 
@@ -37,11 +37,11 @@ export default function Home() {
                   .
                 </p>
 
-                <Auth>
+                <AuthWrapper>
                   <Table />
 
                   <Modal />
-                </Auth>
+                </AuthWrapper>
               </div>
             </div>
           </div>

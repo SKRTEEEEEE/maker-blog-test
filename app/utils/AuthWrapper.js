@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 import { authSubscribe } from "@junobuild/core-peer";
-import { Login } from "./Login";
-import { Logout } from "./Logout";
+import { Login } from "../components/Login";
+import { Logout } from "../components/Logout";
 
 export const AuthContext = createContext();
 
-export const Auth = ({ children }) => {
+export const AuthWrapper = ({ children }) => {
   const [user, setUser] = useState(undefined);
 
   useEffect(() => {
