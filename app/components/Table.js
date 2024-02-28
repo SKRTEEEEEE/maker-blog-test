@@ -32,6 +32,28 @@ export const Table = () => {
     (async () => await list())();
   }, [user]);
 
+  
+  const renderTextWithLinks = (text) => {
+    // Expresión regular para encontrar enlaces en el texto
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const matches = text.match(urlRegex);
+
+    if (!matches) return text;
+
+    return text.split(urlRegex).map((part, index) => {
+      if (matches.includes(part)) {
+        return (
+          <a key={index} href={part} target="_blank" rel="noopener noreferrer">
+            {part}
+          </a>
+        );
+      } else {
+        return part;
+      }
+    });
+  };
+
+
   return (
     <div className="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 mt-8">
       <header className="px-5 py-4 border-b border-gray-100">
@@ -44,8 +66,12 @@ export const Table = () => {
               <span className="px-4 py-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max">
                 {index + 1}
               </span>
-              <div className="line-clamp-3 text-left grow">{text}</div>
+              <div className="line-clamp-3 text-left grow">
+                {/* Poder mostrar enlaces */}
+                {renderTextWithLinks(text)}
+              </div>
               <div>
+                {/* El boton de enlace a la foto */}
                 {url !== undefined ? (
                   <a
                     aria-label="Open data"
