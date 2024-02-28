@@ -1,14 +1,10 @@
-# Next.js + Tailwind
-
-A sample app with Next.js and Tailwind that showcases authentication, datastore and storage usage.
-
 ## Getting started
 
 Make sure you have [node.js](https://nodejs.org) LTS installed.
 
 ```bash
-git clone https://github.com/junobuild/examples
-cd next/diary
+git clone https://github.com/SKRTEEEEEE/maker-blog-test
+cd maker-blog-test
 npm ci
 ```
 
