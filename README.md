@@ -1,34 +1,26 @@
-## Getting started
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-Make sure you have [node.js](https://nodejs.org) LTS installed.
+# Maker blog
 
-```bash
-git clone https://github.com/SKRTEEEEEE/maker-blog-test
-cd maker-blog-test
-npm ci
-```
 
-## Local development
+## [Descripción del Proyecto](markdown/descripcion.md)
 
-```
-npm run dev
-```
+## [Contratos Desplegados](markdown/contratos_desplegados.md)
 
-## Client side only
+## [Recursos](markdown/recursos.md)
 
-The Internet Computer, including Juno, does not currently support Server Side Rendering. Therefore, it is recommended to generate a pre-rendered or client-side-only frontend application.
+## Contacto
 
-We suggest using the [static exports](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) option from Next.js.
+### Agradecimientos
 
-In `next.config.js` file:
+### Licencia
 
-```javascript
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-};
+### Team
 
-module.exports = nextConfig;
-```
+#### [SKRTEEEEEE mail](mailto:adanreh.m@gmail.com)
 
-After `npm run build`, the bundle output directory called `out` can be used as the source of the content to upload to a Juno's satellite.
+### Contribuciones y Problemas
+
+Si encuentras problemas o deseas contribuir al proyecto, por favor, crea un issue en el repositorio.
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
