@@ -1,7 +1,18 @@
+"use client";
 
+import { useEffect } from "react";
+import { initJuno } from "@junobuild/core-peer";
+import { AuthWrapper } from "@/app/utils/AuthWrapper";
+import { Table } from "@/app/components/Table";
+import { Modal } from "@/app/components/Modal";
 
-export default function Home() {
-
+export default function DashboardPage() {
+  useEffect(() => {
+    (async () =>
+      await initJuno({
+        satelliteId: "vctpb-cqaaa-aaaal-adwvq-cai",
+      }))();
+  }, []);
 
 
 
@@ -33,6 +44,11 @@ export default function Home() {
           
                 </p>
 
+                <AuthWrapper>
+                  <Table />
+
+                  <Modal />
+                </AuthWrapper>
               </div>
             </div>
           </div>
