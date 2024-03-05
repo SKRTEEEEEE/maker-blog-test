@@ -5,6 +5,7 @@ import { initJuno } from "@junobuild/core-peer";
 import { AuthWrapper } from "@/app/utils/AuthWrapper";
 import { Table } from "@/app/components/Table";
 import { Modal } from "@/app/components/Modal";
+import { UsersSection } from "../components/Users";
 
 export default function DashboardPage() {
   useEffect(() => {
@@ -46,9 +47,11 @@ export default function DashboardPage() {
 
                 <AuthWrapper>
                   <Table />
-
                   <Modal />
+
+                  
                 </AuthWrapper>
+                <UsersSection/>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import HeaderComponent from "./components/HeaderNavbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import ThirdWebProviderWrapper from "./utils/ThirdWebProviderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ThirdWebProviderWrapper>
     <html lang="en">
       {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
       <body className={inter.className}>
@@ -21,7 +23,8 @@ export default function RootLayout({ children }) {
         </nav>
         {children}
         </div>
-        </body>
+      </body>
     </html>
+    </ThirdWebProviderWrapper>
   );
 }
