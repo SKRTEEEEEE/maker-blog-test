@@ -12,10 +12,6 @@ export const UsersSection = () => {
     const { data: numUsers, isLoading: isLoadingUsers, error: errorNumUsers } = useContractRead(contract, "numUsers")
     const {data: isAdmin, isLoading: isLoadingIsAdmin, error: errorIsAdmin} = useContractRead(contract, "obtenerInfoUsuario", [address]);
     const [newValue, setNewValue] = useState("");
-
-    console.log("creator: ", creator)
-    // console.log("isAdmin: ", isAdmin)
-    // console.log("isLoadingAdmin: ", isLoadingIsAdmin, "error: ", errorIsAdmin);
     return (
         <section>
             <div>
@@ -26,14 +22,16 @@ export const UsersSection = () => {
             </div>
             {(address == creator) || isAdmin ?
             <div>
+                {/* Limitamos que si no eres el creador el boton de entrar un nuevo usuario no se pueda usar, a fines seria mejor directamente no mostrar esta parte si no eres el creador, pero lo hago asi para que quede como ejemplo de como usar disabled */}
                 <h3>Enter a new Admin User: </h3>
-                <input  value={newValue} onChange={(e) => setNewValue(e.target.value)} style={{
+                <input disabled={address !== creator} value={newValue} onChange={(e) => setNewValue(e.target.value)} style={{
                 marginBottom: '1rem',
                 borderRadius: '0.5rem',
                 border: '1px solid black',
                 padding: '0.5rem',
               }}/>
                 <Web3Button contractAddress={ADMIN_USERS_CONTRACT}
+                isDisabled={address!==creator}
                 action={(contract) => contract.call("asignarRolAdmin", [newValue])}
                 onSubmit={() => setNewValue("0")}
                 onSuccess={()=>alert("New Admin Saved!")}
