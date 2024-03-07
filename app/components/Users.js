@@ -16,8 +16,8 @@ export const UsersSection = () => {
         <section>
             <div>
                 <h2>Users Admin selection section</h2>
-                    {errorNumUsers !== null ? errorNumUsers : <p>Num Admin Users: {isLoadingUsers ? "Loading" : numUsers?.toNumber()}</p>}
-                    {errorIsAdmin !== null ? errorIsAdmin :  <p>{isLoadingIsAdmin ? "Loading" : (isAdmin === true ? "You're admin" : "You're not still admin")}</p>}
+                    {errorNumUsers !== null ? console.log(errorNumUsers) : <p>Num Admin Users: {isLoadingUsers ? "Loading" : numUsers?.toNumber()}</p>}
+                    {errorIsAdmin !== null ? console.log(errorIsAdmin) :  <p>{isLoadingIsAdmin ? "Loading" : (isAdmin === true ? "You're admin" : "You're not still admin")}</p>}
 
             </div>
             {(address == creator) || isAdmin ?

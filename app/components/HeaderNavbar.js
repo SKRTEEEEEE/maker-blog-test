@@ -14,7 +14,7 @@ export default function HeaderComponent() {
       <h1 className="px-4">Blog Template</h1>
       {/* <Image src="/icons/seo-icon--neon-website--cyberpunk-colors.svg" width={30} height={30}/> */}
       {links.map((link) => (
-        <span key={link.nombre} className="">
+        <nav key={link.nombre} className="">
           <Link href={link.enlace}>
             <div className="xl:py flex  justify-between sm:w-full">
 
@@ -22,7 +22,7 @@ export default function HeaderComponent() {
             <p className="md:flex  hidden">{link.nombre}</p>
             <Image src={link.img} width={60} height={60}/></div>
           </Link>
-        </span>
+        </nav>
       ))}
     </div>
 
