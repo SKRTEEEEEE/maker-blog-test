@@ -12,8 +12,8 @@ export const ClaimContactsNFTsSection = () => {
   // const {data: contactsNFTs, isLoading: isLoadingContactsNFTs, error: errorContactsNFTs} = useOwnedNFTs(contract, address)
   const { data: contactsNFTs, isLoading: isLoadingContactsNFTs, error: errorContactsNFTs } = useNFTs(contract)
 
-  console.log("contactsNFTs: ", contactsNFTs, "isLoadingContactsNFTs: ", isLoadingContactsNFTs, "errorContactsNFTs: ", errorContactsNFTs);
-  console.log("contract: ", contract);
+  // console.log("contactsNFTs: ", contactsNFTs, "isLoadingContactsNFTs: ", isLoadingContactsNFTs, "errorContactsNFTs: ", errorContactsNFTs);
+  // console.log("contract: ", contract);
 
 
   return (
