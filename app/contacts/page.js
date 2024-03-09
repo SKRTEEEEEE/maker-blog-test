@@ -15,9 +15,9 @@ export default function ContactsPage() {
         </p></Link>
       </div>
     </div>
-    <section>Here goes the cards
+    
       <ClaimContactsNFTsSection/>
-    </section>
+    
   </div>
 </main>;
 }

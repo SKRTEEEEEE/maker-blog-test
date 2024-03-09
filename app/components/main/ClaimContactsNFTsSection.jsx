@@ -3,14 +3,14 @@
 import { CONTACTS_COLLECTION_CONTRACT } from "@/app/const/contracts"
 import { useContract, useContractMetadata, useNFTs } from "@thirdweb-dev/react"
 import { ShowCollectionMetadata } from "./nfts/ShowCollectionMetadata"
-import { NFTCollectionCard } from "./nfts/NFTCollectionCard"
+import { BuyNFTCollectionCard } from"./nfts/BuyNFTCollectionCard"
 
 export const ClaimContactsNFTsSection = () => {
   // const address = "0xb36a9190D654f067B3af11d356e3E9087D2122d2"
   const { contract } = useContract(CONTACTS_COLLECTION_CONTRACT)
   const { data: contactsCollectionMetadata } = useContractMetadata(contract)
   // const {data: contactsNFTs, isLoading: isLoadingContactsNFTs, error: errorContactsNFTs} = useOwnedNFTs(contract, address)
-  const { data: contactsNFTs, isLoading: isLoadingContactsNFTs, error: errorContactsNFTs } = useNFTs(contract)
+  const { data: contactsNFTs, isLoading: isLoadingContactsNFTs } = useNFTs(contract)
 
   // console.log("contactsNFTs: ", contactsNFTs, "isLoadingContactsNFTs: ", isLoadingContactsNFTs, "errorContactsNFTs: ", errorContactsNFTs);
   // console.log("contract: ", contract);
@@ -22,7 +22,7 @@ export const ClaimContactsNFTsSection = () => {
       <div>{isLoadingContactsNFTs ? <p>Loading...</p> :
 
         contactsNFTs.map(
-          (nft) => <NFTCollectionCard key={nft.metadata.id} nft={nft} />
+          (nft) => <BuyNFTCollectionCard key={nft.metadata.id} nft={nft} contract={CONTACTS_COLLECTION_CONTRACT} />
 
         )
       }</div>
