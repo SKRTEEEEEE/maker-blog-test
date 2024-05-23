@@ -1,11 +1,14 @@
+import SideBar from "./components/SideBar";
 
 
 export default function Home() {
   return (
     <main className="isolate bg-white">
+      <SideBar/>
       <div className="relative px-6 lg:px-8">
         <div className="mx-auto max-w-2xl pt-16">
           <div className="text-center">
+
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Web 3 Maker K1T
             </h1>
@@ -20,6 +23,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 target="_blank"
               > DAMAKER</a>{" "}
+              
             </p>
           </div>
         </div>
